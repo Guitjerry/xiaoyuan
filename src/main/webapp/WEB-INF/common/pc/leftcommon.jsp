@@ -29,7 +29,8 @@
                 <a href="javascript:;"><i class="icon icon-gift"></i>商品模块</a>
                 <ul class="nav submenu">
                     <li msg="category"><a href="<%=request.getContextPath()%>/pc/category/list?msg=category">商品类目管理</a></li>
-                    <li><a href="javascript:;">商品管理</a></li>
+                    <li msg="good"><a href="<%=request.getContextPath()%>/pc/good/list?msg=good">商品管理</a></li>
+
 
 
                 </ul>
