@@ -52,4 +52,5 @@ public class TbGoodAndAttr {
     public void setAttrvalue(String attrvalue) {
         this.attrvalue = attrvalue;
     }
+
 }

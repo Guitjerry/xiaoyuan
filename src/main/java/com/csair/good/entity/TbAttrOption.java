@@ -1,7 +1,6 @@
 package com.csair.good.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * 属性值:
@@ -16,6 +15,10 @@ import javax.persistence.Table;
 @Table
 @Entity(name = "tb_attr_option")
 public class TbAttrOption {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY) // MYSQL时可以这样使用自增
+    @SequenceGenerator(name = "TestSequence", sequenceName = "SEQ_Test", allocationSize=1)
+    private Integer id;
     private String attrcode;//属性值编号
     private String value;//属性值
     private String attroptioncode;//属性名编号
@@ -42,5 +45,13 @@ public class TbAttrOption {
 
     public void setAttroptioncode(String attroptioncode) {
         this.attroptioncode = attroptioncode;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
