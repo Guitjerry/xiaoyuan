@@ -14,11 +14,11 @@ public class TbGood {
     @SequenceGenerator(name = "TestSequence", sequenceName = "SEQ_Test", allocationSize=1)
     private Integer id;
     @Column(name="name")
-    private String name;
+    private String name;//商品名称
     @Column(name="price")
     private double price;
     @Column(name="code")
-    private String code;
+    private String code;//商品编号
     @Column(name="status")
     private int status;
     @Column(name="createtime")
@@ -36,8 +36,11 @@ public class TbGood {
     @Column(name="photo")
     private String photo;
     @Column(name="categoryid")
-    private int categoryid;//所属分类
-
+    private int categoryid;//商品分类编号
+    @Column(name="spu")
+    private int spu;//spu销量
+    @Column(name="pinglun")
+    private int pinglun;//评论数
     public Integer getId() {
         return id;
     }
@@ -140,5 +143,21 @@ public class TbGood {
 
     public void setCategoryid(int categoryid) {
         this.categoryid = categoryid;
+    }
+
+    public int getSpu() {
+        return spu;
+    }
+
+    public void setSpu(int spu) {
+        this.spu = spu;
+    }
+
+    public int getPinglun() {
+        return pinglun;
+    }
+
+    public void setPinglun(int pinglun) {
+        this.pinglun = pinglun;
     }
 }

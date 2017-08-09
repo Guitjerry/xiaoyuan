@@ -14,7 +14,7 @@
     <title>供货商列表</title>
     <c:import url="../../../common/pc/include.jsp"></c:import>
 </head>
-<input name="msg" value="supplier" type="hidden" action="ajax_good_edit" about="">
+<input name="msg" value="good" type="hidden" action="ajax_good_edit" about="">
 <body path="<%=request.getContextPath()%>">
 <div class="container-fluid">
     <div class="row">

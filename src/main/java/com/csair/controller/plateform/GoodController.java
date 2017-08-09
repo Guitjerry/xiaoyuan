@@ -28,6 +28,7 @@ public class GoodController {
      */
     @RequestMapping(value = "addGood")
     public String addGood(HttpServletRequest request, HttpServletResponse response){
+        request.setAttribute("msg","good");
         return "pc/good/addGood";
     }
 
