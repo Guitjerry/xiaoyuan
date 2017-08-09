@@ -45,7 +45,7 @@
     </div>
 </div>
 
-<div id="adddiv" style="width: 40%;top:30%!important;right: 30%"></div>
+<div id="adddiv" style="width:800px;position:absolute!important;left:20%!important;top:20%!important;"></div>
 <div id="addchildrendiv" style="width: 40%;top:30%!important;right: 30%"></div>
 </body>
 </html>
