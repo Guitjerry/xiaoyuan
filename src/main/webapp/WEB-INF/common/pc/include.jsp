@@ -33,6 +33,7 @@
     <link href="<%=request.getContextPath()%>/css/tab-fix.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/admin-tag.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/libs/fileupload/fileupload.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/css/leftmenu.css" rel="stylesheet">
 
 </head>
 </html>

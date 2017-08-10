@@ -124,6 +124,16 @@ body{
 .f-pd10{padding: 10px}
 .f-pd20{padding: 20px}
 .f-pd30{padding: 30px}
+
+/**
+*外边距样式
+*/
+.f-pr5{padding-right: 5px}
+.f-pr10{padding-right: 10px}
+.f-pr20{padding-right: 20px}
+.f-pr30{padding-right: 30px}
+.f-pr40{padding-right: 40px}
+.f-pr50{padding-right: 50px}
 /**
 *内边距样式
 */

@@ -73,7 +73,7 @@ var _openSlidePanel=function(id,position){
         _div.css({'background':'#fff','border':'2px solid #F2F2F2','position': 'absolute','width':_width,'top':_top,'right':_right,'z-index':2000,'position':'absolute'});
         _div.append("<div style='position: absolute;z-index: 9999;left: -8px;top: -8px;width: 16px;height: 16px;'>"+
             "<a  href='javascript:void(0);' onclick=\"_closeSlidePanel('"+id+"')\"></a></div>");
-
+        $('.login_plugins_bg').removeClass('none');
         _div.addClass('sys_slidePanel');
         _div.attr('isOpen','true');
         // _div.animate({right:_right});
@@ -85,6 +85,7 @@ var _closeSlidePanel=function (id){
     var _div=$('#'+id);
     var _width=_div.width();
     _div.attr('isOpen','false');
+    $('.login_plugins_bg').addClass('none');
     if(_div.attr('opentype')=='url'){
         _div.css({right:'30%'});
         _div.empty();

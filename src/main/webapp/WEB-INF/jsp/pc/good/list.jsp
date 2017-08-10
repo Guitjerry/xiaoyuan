@@ -47,6 +47,8 @@
 
 <div id="adddiv" style="width:800px;position:absolute!important;left:20%!important;top:20%!important;"></div>
 <div id="addchildrendiv" style="width: 40%;top:30%!important;right: 30%"></div>
+<%--遮罩--%>
+<div class='login_plugins_bg none'></div>
 </body>
 </html>
 

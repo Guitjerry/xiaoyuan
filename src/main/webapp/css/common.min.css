@@ -307,6 +307,9 @@
 .cm-cor-f08300{
 	color:#f08300;
 }
+.cm-cor-fff{
+	color:#fff;
+}
 .soliline{
 	border-bottom:1px solid #c9c9c9;
 	
@@ -357,6 +360,10 @@
 .cm-lh30{
 	line-height: 30px;
 }
+.cm-color-fff{
+	color: #fff;
+}
+
 
 .leftLoading {
 	position: absolute;
@@ -387,4 +394,19 @@ label{
 }
 .v-hidden{
 	visibility:hidden;
+
+}
+.login_plugins_bg {
+	position:fixed;
+	top:0;
+	z-index:111;
+	background:rgba(0,0,0,0.3);
+	-webkit-transition: background ease-out .3s;
+	-moz-transition: background ease-out .3s;
+	-ms-transition: background ease-out .3s;
+	-o-transition: background ease-out .3s;
+	transition: background ease-out .3s;
+	width: 100%;
+	height:100%;
+	filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#66000000,endColorstr=#66000000);/*Filter for older IEs */
 }
