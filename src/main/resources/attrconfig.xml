@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tbgood>
+      <!--属性配置-->
+    <attr table="tb_attr">
+        <name>容量</name>
+        <code>common001</code>
+        <categorycode></categorycode>
+        <parentcode></parentcode>
+
+
+    </attr>
+    <attr table="tb_attr">
+        <name>保质期</name>
+        <code>common002</code>
+        <categorycode></categorycode>
+        <parentcode></parentcode>
+
+
+    </attr>
+    <attr table="tb_attr">
+        <name>商品重量</name>
+        <code>common003</code>
+        <categorycode></categorycode>
+        <parentcode></parentcode>
+
+
+    </attr>
+
+
+
+    <!--麻辣-->
+    <attr table="tb_attr">
+        <name>口味</name>
+        <code>mala001</code>
+        <categorycode>mala</categorycode>
+        <parentcode></parentcode>
+
+
+    </attr>
+
+</tbgood>

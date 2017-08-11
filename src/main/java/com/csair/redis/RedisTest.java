@@ -9,6 +9,9 @@ import java.util.List;
  */
 public class RedisTest {
     public static void main(String[] args) {
+        // 1.初始化
+
+
         Jedis jedis = new Jedis("localhost");
         jedis.rpush("messages", "Hello how are you?");
 
@@ -17,7 +20,8 @@ public class RedisTest {
         jedis.rpush("messages", "I should look into this NOSQL thing ASAP");
 
         List<String> values = jedis.lrange("messages", 0, -1);
-
+        //查看服务是否运行
+        System.out.println("Server is running: "+jedis.ping());
         System.out.println(values);
     }
 }

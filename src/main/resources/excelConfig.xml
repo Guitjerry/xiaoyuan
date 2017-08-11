@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<insertconfig>
+    <table name="tb_attr">
+        <column>code</column>
+        <column>name</column>
+        <column>categorycode</column>
+        <column>parentcode</column>
+    </table>
+</insertconfig>
+
+

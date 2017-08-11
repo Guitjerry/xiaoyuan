@@ -104,11 +104,13 @@
                             targetElement.children('a').children('.icon-chevron-up').removeClass('icon-chevron-up').addClass('icon-chevron-down');
                             var tds = obj.entity;
                             for(var i=0;i<tds.length;i++){
+                                var idtd = "<td >"+"<span style='padding-left: 40px;color: #f1a325'>"+obj.entity[i].id+"</span></td>";
                                 var nametd = "<td >"+"<span style='padding-left: 40px;color: #f1a325'>"+obj.entity[i].name+"</span></td>";
                                 var codetd = "<td>"+obj.entity[i].code+"</td>";
                                 var statustd = "<td>"+obj.entity[i].status+"</td>";
                                 var parentidtd = "<td>"+obj.entity[i].parentname+"</td>";
-                                var opt = "<td>"+"</td>";
+
+                                var opt = "<td>"+'<button type="button" title="新增三级类目" class="btn btn-danger" onclick="showchildrendiv('+obj.entity[i].id+','+"'"+obj.entity[i].name+"'"+')"> 新增三级类目</button>'+"</td>";
                                 var newElement = $("<tr parenttag="+obj.entity[i].parentid+ ">"+nametd+codetd+parentidtd+statustd+opt+"</tr>");
 
                                 var parent = targetElement.parent("tr").parent("tbody");
