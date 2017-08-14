@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,13 +36,14 @@ public class UploadFileController {
 
     public void uploadfile(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        final String uploadPath = PropertyUtil.getProperty("uploadpicpath");
-        final String uploadUrl = request.getContextPath()+"/upload";
+        //final String uploadPath = "http://localhost:8080/template"+File.separator+"upload";
+        String fullUploadPath=request.getServletContext().getRealPath("upload")+File.separator;
+        String fullUploadUrl=request.getContextPath()+File.separator+"upload"+File.separator;
 
         try{
 
-            String fullUploadPath = uploadPath  + "/";
-            String fullUploadUrl = uploadUrl  + "/";
+
+
             UploadFile up = new UploadFile(request, fullUploadPath);
 
                 UploadResultVo vo;

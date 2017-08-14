@@ -80,8 +80,10 @@ public class JxlExcelUtil {
 
                         String val = StringUtils.trimToEmpty(oCell.getContents());
                         if (StringUtils.isBlank(val)) nullCellNum++;
+                    if(!StringUtils.isEmpty(oCell.getContents())){
+                        ReflectionUtils.setFieldValue(target,cloumnname,oCell.getContents().trim());
+                    }
 
-                    ReflectionUtils.setFieldValue(target,cloumnname,oCell.getContents().trim());
                         if (nullCellNum >= columns) { //如果nullCellNum大于或等于总的列数
 
                         }

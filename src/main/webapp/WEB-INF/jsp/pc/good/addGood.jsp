@@ -36,7 +36,7 @@
                             <td >
                                 <div class="input-group">
 
-                                    <input type="text" class="form-control" name="name" placeholder="用户名">
+                                    <input type="text" class="form-control" name="name" placeholder="商品名称">
                                 </div>
                             </td>
                             <td >
@@ -123,8 +123,35 @@
 
             <h3 class="cm-cor-f08300 cm-f16 cm-pdb15">属性信息</h3>
             <p class="soliline"></p>
-            <div class="cm-pd10 info-panel cm-f14">
+            <div class="cm-pd10 info-panel cm-f14 row" >
 
+                <table class="col-md-6">
+
+                    <c:forEach items="${tbAttrList}" var="attr">
+                        <tr>
+                            <td>
+                                <label>${attr.name}</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" name="value" placeholder="${attr.name}">
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+
+                <table class="col-md-6">
+                    <c:forEach items="${tbAttrListCa}" var="attr">
+                        <tr>
+                            <td>
+                                <label>${attr.name}</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" name="value" placeholder="${attr.name}">
+                            </td>
+                        </tr>
+                    </c:forEach>
+
+                </table>
             </div>
             <h3 class="cm-cor-f08300 cm-f16 cm-pdb15">SKU</h3>
             <p class="soliline"></p>
