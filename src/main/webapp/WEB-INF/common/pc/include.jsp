@@ -34,6 +34,9 @@
     <link href="<%=request.getContextPath()%>/css/admin-tag.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/libs/fileupload/fileupload.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/leftmenu.css" rel="stylesheet">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/libs/KindEditor/themes/default/default.css" />
+    <link href="<%=request.getContextPath()%>/libs/KindEditor/plugins/code/prettify.css" rel="stylesheet">
+
 
 </head>
 </html>
@@ -57,7 +60,12 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/libs/fileupload/jquery.iframe-transport.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/libs/fileupload/jquery.ui.widget.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/libs/fileupload/jquery.fileupload.js"></script>
+
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.validate.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/libs/KindEditor/plugins/code/prettify.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/libs/KindEditor/kindeditor-all-min.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/libs/KindEditor/lang/zh-CN.js"></script>
+
 <script>
     var platform=$('#platform').val();
 </script>

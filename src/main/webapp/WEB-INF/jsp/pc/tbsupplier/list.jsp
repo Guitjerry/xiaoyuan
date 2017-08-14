@@ -70,7 +70,7 @@
                                         </c:otherwise>
                                     </c:choose>
                                 </td>
-                            <td><c:if test="${supplier.picurl!=null}"><img src="<%=request.getContextPath()%>/${picth}/${supplier.picurl}"></c:if></td>
+                            <td style="width: 100px;height: 100px"><c:if test="${supplier.picurl!=null}"><img src="<%=request.getContextPath()%>/${picth}/${supplier.picurl}" ></c:if></td>
                                 <td>${supplier.addr}</td>
                                 <td>${supplier.sort}</td>
                                 <td>${supplier.note}</td>

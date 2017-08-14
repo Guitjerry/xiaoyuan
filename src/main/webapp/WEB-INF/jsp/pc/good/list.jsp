@@ -49,13 +49,20 @@
 <div id="addchildrendiv" style="width: 40%;top:30%!important;right: 30%"></div>
 <%--遮罩--%>
 <div class='login_plugins_bg none'></div>
+
 </body>
 </html>
 
+<script type="text/javascript">
 
-<script>
-
-
-
+    KindEditor.ready(function(K) {
+        window.editor = K.create('textarea', {
+            allowFileManager : true,
+            langType : 'zh-CN',
+            autoHeightMode : true
+        });
+        editor = K.create('#editor_id', {
+        });
+    })
 </script>
 

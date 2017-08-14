@@ -19,7 +19,9 @@
         新增
     </div>
     <form  class="form-horizontal" role="_editForm form" action="ajax_supplier_edit" data-validate="true"  id="editForm" >
-
+        <c:if test="${tbSupplier.id>0}">
+            <input name="id" value="${tbSupplier.id}">
+        </c:if>
         <div class="form-group f-mt20">
             <label for="exampleInputAccount4" class="col-sm-2">*名称:</label>
             <div class="col-md-6 col-sm-6">
@@ -66,7 +68,7 @@
                                     <span class="imgDelete icon-remove-sign" title="清空图片" data-baseurl="<%=request.getContextPath()%>"
                                           data-defaultPhoto="<%=request.getContextPath()%>/images/default-photo.jpg" data-file=""></span>
                     <a href="javascript:void(0);"></a>
-                    <img src="<%=request.getContextPath()%>/images/default-photo.jpg" border="0" width="100%">
+                    <img <c:if test="${tbSupplier.id>0}">src="<%=request.getContextPath()%>/${picth}/${tbSupplier.picurl}"</c:if><c:if test="${tbSupplier.id==null}">src="<%=request.getContextPath()%>/images/default-photo.jpg"</c:if> border="0" width="100%">
                 </div>
                 <input type="hidden" name="picurl"
                        id="picurl" value="<%=request.getContextPath()%>/${picth}/${tbSupplier.picurl}" class=""/>

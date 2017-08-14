@@ -79,7 +79,7 @@ public class InitController {
             List<Object> objects = commonImportBack(in,"upfile","excelConfig.xml","tb_attr",new TbAttr());
             for(Object object:objects){
                 TbAttr tbAttr = (TbAttr) object;
-                List<TbAttr> tbAttrs = tbAttrRepository.findAllByCode(tbAttr.getCode());
+                List<TbAttr> tbAttrs = tbAttrRepository.findAllByAttrcode(tbAttr.getAttrcode());
                 //更新
                 if(tbAttrs!=null&&tbAttrs.size()>0){
                     TbAttr tbAttrRe = tbAttrs.get(0);

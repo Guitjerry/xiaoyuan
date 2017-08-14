@@ -224,6 +224,7 @@
 		showPicurl:function(selector){
 			$(selector).each(function(index,_this){
 				var baseurl = $(_this).data("baseurl");
+
 				var wrap = $(_this).parent();
 				var filename = $(_this).val();
 				var upload_viewer = wrap.find(".upload-viewer");

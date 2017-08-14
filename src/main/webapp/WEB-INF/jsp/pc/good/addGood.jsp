@@ -130,10 +130,10 @@
                     <c:forEach items="${tbAttrList}" var="attr">
                         <tr>
                             <td>
-                                <label>${attr.name}</label>
+                                <label>${attr.attrname}</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" name="value" placeholder="${attr.name}">
+                                <input type="text" class="form-control" value="${attr.value}" name="attrs" placeholder="${attr.attrname}">
                             </td>
                         </tr>
                     </c:forEach>
@@ -143,30 +143,34 @@
                     <c:forEach items="${tbAttrListCa}" var="attr">
                         <tr>
                             <td>
-                                <label>${attr.name}</label>
+                                <label>${attr.attrname}</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" name="value" placeholder="${attr.name}">
+                                <input type="text" class="form-control" value="${attr.value}" name="attrs" placeholder="${attr.attrname}">
                             </td>
                         </tr>
                     </c:forEach>
 
                 </table>
             </div>
-            <h3 class="cm-cor-f08300 cm-f16 cm-pdb15">SKU</h3>
-            <p class="soliline"></p>
-            <div class="cm-pd10 info-panel cm-f14">
+            <%--先不考虑--%>
+            <%--<h3 class="cm-cor-f08300 cm-f16 cm-pdb15">SKU</h3>--%>
+            <%--<p class="soliline"></p>--%>
+            <%--<div class="cm-pd10 info-panel cm-f14">--%>
+
 
             </div>
             <h3 class="cm-cor-f08300 cm-f16 cm-pdb15">商品明细</h3>
             <p class="soliline"></p>
+            <textarea id="editor_id"></textarea>
+            </textarea>
             <div class="cm-pd10 info-panel cm-f14">
 
             </div>
 
         </div>
         <div class="cm-tac f-mb10">
-            <button class="btn btn-info " type="submit">确定</button>
+            <button class="btn btn-info " onclick="addGoodSure()">确定</button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="btn " type="button" onclick="closeSlidePanel()">取消</button>
         </div>
@@ -175,3 +179,29 @@
 
 </body>
 </html>
+<script>
+    $(function () {
+        $('.ke-container').css('width','100%');
+    })
+    KindEditor.ready(function(K) {
+        window.editor = K.create('textarea', {
+            allowFileManager : true,
+            langType : 'zh-CN',
+            autoHeightMode : true
+        });
+        editor = K.create('#editor_id', {
+        });
+    })
+    function addGoodSure() {
+        var name = $('input[name="name"]').val();
+        var code = $('input[name="code"]').val();
+        var price = $('input[name="price"]').val();
+        var sort = $('input[name="sort"]').val();
+        var categoryid = $('#categoryid').val();
+        var hotlevel = $('#hotlevel').val();
+        var fileupload1 = $('#fileupload1').val();
+        var attrs =$('input[name="attrs"]').val();//属性值
+
+//        var goodinfo={"name"}
+    }
+</script>

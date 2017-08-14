@@ -53,6 +53,8 @@ public class TbSupplierController {
     public String addSupplier(HttpServletRequest request, HttpServletResponse response, String msg,Integer id){
         CommArray commArray = new CommArray();
         request.setAttribute("CommArray",commArray);
+        String picth = PropertyUtil.getProperty("imagepath");
+        request.setAttribute("picth",picth);
         if(id!=null&&id>0){
             TbSupplier tbSupplier = tbSupplierRepository.findOne(id);
             request.setAttribute("tbSupplier",tbSupplier);
@@ -61,10 +63,12 @@ public class TbSupplierController {
     }
     @RequestMapping(value = "ajax_supplier_edit")
     public void ajax_supplier_edit(HttpServletRequest request, HttpServletResponse response, TbSupplier tbSupplier,Integer supplierid){
-        tbSupplierRepository.save(tbSupplier);
+
         //更新
         if(tbSupplier!=null&&tbSupplier.getId()>0){
             tbSupplierRepository.saveAndFlush(tbSupplier);
+        }else{
+            tbSupplierRepository.save(tbSupplier);
         }
         JsonUtilTemp.returnSucessJson(response,"保存成功");
     }
