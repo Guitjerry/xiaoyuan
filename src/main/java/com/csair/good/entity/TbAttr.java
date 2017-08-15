@@ -17,9 +17,13 @@ public class TbAttr {
     @GeneratedValue(strategy= GenerationType.IDENTITY) // MYSQL时可以这样使用自增
     @SequenceGenerator(name = "TestSequence", sequenceName = "SEQ_Test", allocationSize=1)
     private Integer id;
+    @Column(name="attrname")
     private String attrname;//属性名
+    @Column(name="attrcode")
     private String attrcode;//属性名编号
+    @Column(name="categorycode")
     private String categorycode;//商品分类编号
+    @Column(name="parentcode")
     private String parentcode;// 父属性编号
 
     public String getAttrname() {

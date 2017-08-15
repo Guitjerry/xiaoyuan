@@ -19,16 +19,19 @@ public class TbAttrOption {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY) // MYSQL时可以这样使用自增
     @SequenceGenerator(name = "TestSequence", sequenceName = "SEQ_Test", allocationSize=1)
-    private String attrcode;//属性值编号
+    @Column(name="attroptionid")
+    private String attroptionid;//属性值编号
+    @Column(name="value")
     private String value;//属性值
+    @Column(name="attroptioncode")
     private String attroptioncode;//属性名编号
 
-    public String getAttrcode() {
-        return attrcode;
+    public String getAttroptionid() {
+        return attroptionid;
     }
 
-    public void setAttrcode(String attrcode) {
-        this.attrcode = attrcode;
+    public void setAttroptionid(String attroptionid) {
+        this.attroptionid = attroptionid;
     }
 
     public String getValue() {

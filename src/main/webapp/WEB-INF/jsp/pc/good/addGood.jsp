@@ -133,7 +133,7 @@
                                 <label>${attr.attrname}</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" value="${attr.value}" name="attrs" placeholder="${attr.attrname}">
+                                <input type="text" class="form-control" name="attrs" placeholder="${attr.attrname}">
                             </td>
                         </tr>
                     </c:forEach>
@@ -146,7 +146,7 @@
                                 <label>${attr.attrname}</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" value="${attr.value}" name="attrs" placeholder="${attr.attrname}">
+                                <input type="text" class="form-control" name="attrs" placeholder="${attr.attrname}">
                             </td>
                         </tr>
                     </c:forEach>
@@ -201,6 +201,16 @@
         var hotlevel = $('#hotlevel').val();
         var fileupload1 = $('#fileupload1').val();
         var attrs =$('input[name="attrs"]').val();//属性值
+        var data={"name":name,"code":code,"price":price,"sort":sort,"categoryid":categoryid,"hotlevel":hotlevel,"pic":fileupload1};
+        $.ajax({
+            type:"post",
+            url:"ajax_good_edit",
+            data:"orderJson="+JSON.stringify(data),
+            contentType:'application/json;charset=UTF-8',
+            success:function (data) {
+
+            }
+        });
 
 //        var goodinfo={"name"}
     }

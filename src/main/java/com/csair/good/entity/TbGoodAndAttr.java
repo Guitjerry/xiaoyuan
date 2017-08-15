@@ -11,14 +11,17 @@ import javax.persistence.*;
  (4, 1, 2, 4) 商品1尺码为XL
  */
 @Table
-@Entity(name = "tb_attr_and_option")
+@Entity(name = "tb_good_and_attr")
 public class TbGoodAndAttr {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY) // MYSQL时可以这样使用自增
     @SequenceGenerator(name = "TestSequence", sequenceName = "SEQ_Test", allocationSize=1)
     private Integer id;
+    @Column(name="goodcode")
     private String goodcode;//商品编号
+    @Column(name="attrcode")
     private String attrcode;//属性名编号
+    @Column(name="attrvalue")
     private String attrvalue;//属性值编号
 
     public Integer getId() {

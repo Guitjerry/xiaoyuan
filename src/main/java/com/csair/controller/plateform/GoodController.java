@@ -1,14 +1,18 @@
 package com.csair.controller.plateform;
 
+import com.alibaba.fastjson.JSONObject;
 import com.csair.good.entity.TbAttr;
 import com.csair.good.repository.TbAttrRepository;
 import com.csair.good.service.TbAttrService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.List;
 
 @Controller
@@ -50,8 +54,19 @@ public class GoodController {
      * @param request
      * @param response
      */
-    @RequestMapping(value = "ajax_good_edit")
+    @RequestMapping(value = "ajax_good_edit",method = RequestMethod.POST)
     public void ajax_good_edit(HttpServletRequest request, HttpServletResponse response){
+        //解码
+        String str = null;
+        try {
+            str = URLDecoder.decode(request.getParameter("orderJson"),"UTF-8");
+//            JSONObject jb=new JSONObject();
+//            //将json格式的字符串转换为json对象，并取得该对象的“userName”属性值
+//            String o=(String)jb.fromObject(str).get("userName");
+            System.out.println(str);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
 
     }
 }
