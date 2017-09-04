@@ -18,7 +18,10 @@
     </style>
 </head>
 <body>
-<div class="container-fluid clearfix">
+<form id="addiv">
+    <div class="container-fluid clearfix">
+
+
 
     <!-- 主内容 -->
     <div class="main-container" id="mainContainer">
@@ -133,7 +136,7 @@
                                 <label>${attr.attrname}</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" name="attrs" placeholder="${attr.attrname}">
+                                <input type="text" class="form-control" name=${attr.attrcode}" placeholder="${attr.attrname}">
                             </td>
                         </tr>
                     </c:forEach>
@@ -146,7 +149,7 @@
                                 <label>${attr.attrname}</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control" name="attrs" placeholder="${attr.attrname}">
+                                <input type="text" class="form-control" name=${attr.attrcode}" placeholder="${attr.attrname}">
                             </td>
                         </tr>
                     </c:forEach>
@@ -175,8 +178,7 @@
             <button class="btn " type="button" onclick="closeSlidePanel()">取消</button>
         </div>
     </div>
-</div>
-
+</form>
 </body>
 </html>
 <script>
@@ -200,12 +202,12 @@
         var categoryid = $('#categoryid').val();
         var hotlevel = $('#hotlevel').val();
         var fileupload1 = $('#fileupload1').val();
-        var attrs =$('input[name="attrs"]').val();//属性值
+
         var data={"name":name,"code":code,"price":price,"sort":sort,"categoryid":categoryid,"hotlevel":hotlevel,"pic":fileupload1};
         $.ajax({
             type:"post",
             url:"ajax_good_edit",
-            data:"orderJson="+JSON.stringify(data),
+            data:JSON.stringify(data),
             contentType:'application/json;charset=UTF-8',
             success:function (data) {
 

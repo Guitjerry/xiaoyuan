@@ -1,13 +1,15 @@
 package com.csair.controller.plateform;
-
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.csair.good.entity.TbAttr;
 import com.csair.good.repository.TbAttrRepository;
 import com.csair.good.service.TbAttrService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -54,17 +56,28 @@ public class GoodController {
      * @param request
      * @param response
      */
-    @RequestMapping(value = "ajax_good_edit",method = RequestMethod.POST)
-    public void ajax_good_edit(HttpServletRequest request, HttpServletResponse response){
+    @RequestMapping(value = "ajax_good_edit")
+    public void ajax_good_edit(HttpServletRequest request, HttpServletResponse response,@RequestBody String strname){
         //解码
         String str = null;
         try {
-            str = URLDecoder.decode(request.getParameter("orderJson"),"UTF-8");
-//            JSONObject jb=new JSONObject();
+//            str = URLDecoder.decode(request.getParameter("orderJson"),"UTF-8");
+            JSONObject jb=JSON.parseObject(strname);
 //            //将json格式的字符串转换为json对象，并取得该对象的“userName”属性值
-//            String o=(String)jb.fromObject(str).get("userName");
-            System.out.println(str);
-        } catch (UnsupportedEncodingException e) {
+            //封装good
+            String name =jb.getString("name");
+            String code =jb.getString("code");
+            String price =jb.getString("price");
+            String sort =jb.getString("sort");
+            String categoryid =jb.getString("categoryid");
+            String hotlevel =jb.getString("hotlevel");
+            String pic =jb.getString("pic");
+
+            //封装商品属性
+
+//            String o=(String)jb.fromObject(name).get("userName");
+            System.out.println(code);
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
